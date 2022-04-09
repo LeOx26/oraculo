@@ -38,3 +38,4 @@ class potafolio:
         response.encoding = 'utf-8'
         return response.json()
 
+#

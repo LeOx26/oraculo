@@ -37,3 +37,5 @@ class potafolio:
         response = requests.request("GET", reqUrl, verify=False )
         response.encoding = 'utf-8'
         return response.json()
+
+###

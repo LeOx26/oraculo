@@ -2,7 +2,7 @@ FROM python:alpine
 
 COPY requirements.txt \.
 
-RUN pip install -r requirements.txt
+RUN pip instal --upgrade pip && pip install -r requirements.txt
 
 RUN useradd -s /bin/bash -m vscode \
  && groupadd docker \

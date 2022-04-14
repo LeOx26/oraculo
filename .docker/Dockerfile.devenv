@@ -1,0 +1,9 @@
+FROM python:alpine
+
+RUN pip install -r requirements.txt
+
+RUN useradd -s /bin/bash -m vscode \
+ && groupadd docker \
+ && usermod -aG docker vscode
+
+USER vscode

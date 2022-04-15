@@ -1,8 +1,13 @@
 FROM python
 
-COPY requirements.txt \.
+RUN pip install -r /com.docker.devenvironments.code/.docker/requirements.txt
 
-RUN pip install -r requirements.txt
+RUN apt-get install openjdk-17-jdk-headless
+
+RUN curl -O https://download2.interactivebrokers.com/portal/clientportal.gw.zip \
+ && unzip clientportal.gw.zip -d clientportal \
+ && cd clientportal \
+ $$ bin/run.sh root/conf.yaml
 
 RUN useradd -s /bin/bash -m vscode \
  && groupadd docker \

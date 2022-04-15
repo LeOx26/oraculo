@@ -1,6 +1,8 @@
 FROM python
 
-RUN pip install -r com.docker.devenvironments.code/.docker/requirements.txt
+COPY requirements.txt \.
+
+RUN pip install -r requirements.txt
 
 RUN apt-get install openjdk-17-jdk-headless
 

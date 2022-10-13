@@ -1,11 +1,3 @@
-*.vscode*
-*.venv*
-*.venv_*
-*.env*
-*__pycache__
-*node_modules
-*.env_testing
-
 # Logs
 logs
 *.log

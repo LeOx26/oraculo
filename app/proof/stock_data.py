@@ -1,7 +1,3 @@
-
-from abc import abstractmethod
-from crypt import methods
-from distutils.log import info
 import numpy as np
 import requests
 import yfinance as yf
@@ -107,5 +103,6 @@ class data:
        response=requests.request(method="GET",url=url,data=payload,headers=headersList)
       
        return response.json()
+       
   
 

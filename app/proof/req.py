@@ -19,6 +19,7 @@ def _req_cik_list():
     st=Text.split()
     
 
+
     return st
 
 

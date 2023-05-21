@@ -4,13 +4,14 @@ from auht import bigqueryStorage,zeros
 from google.api_core.exceptions import Conflict
 
 
-cls=bigqueryStorage()
-
+cls=bigqueryStorage()88
 def crear_tabla(symbol):
     cls.crear_tablas_babynames(symbol)
 
 def list_cik():
-    list_cik=cls.get_list_Cik()
+    list_cik=cls.get_li
+    
+    lmst_Cik()
     array_cik=ast.literal_eval(list_cik)
     return np.array(array_cik).reshape(-1,2)
 

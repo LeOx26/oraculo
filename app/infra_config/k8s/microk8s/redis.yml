@@ -1,20 +1,20 @@
-apiVersion: apps/v1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: redis-stack
+  name: redis
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: redis-stack
+      app: redis
   template:
     metadata:
       labels:
-        app: redis-stack
+        app: redis
     spec:
       containers:
       - name: redis
-        image: redis:6.2-alpine
+        image: redis:latest
         command: ["redis-server"]
         args: ["--appendonly yes", "--enable-module-rdb"]
         ports:
